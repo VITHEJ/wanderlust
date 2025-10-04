@@ -68,6 +68,10 @@ app.use('/listings',listingRoutes);
 app.use('/listings/:id/review',reviewRoutes);
 app.use('/',userRoutes);
 //middlware
+app.get("/", (req,res)=>{
+    res.render("listings/listings.ejs");
+
+})
 app.use((err,req,res,next)=>{
  let {statusCode=500,message='Something Wnt Wrong'}=err;
 res.render("./listings/error.ejs",{err});
