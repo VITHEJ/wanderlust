@@ -1,0 +1,133 @@
+html, body {
+  height: 100%;
+}
+body{
+     font-family: "Epunda Slab", serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+}
+h2{
+    color: black;
+}
+.container{
+    flex: 1;
+}
+
+.fa-compass{
+    color: rgb(243, 40, 40);
+}
+.footer-links{
+    text-decoration: none;
+}
+.footer-socials{
+    font-size: 1.5rem;
+    width:100%;
+
+}
+.footer-brand{
+    width:100%;
+}
+.footer-brand,.footer-socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+background-color:rgb(229, 239, 248);
+margin-top: auto;
+}
+/*cards*/
+.review-card{
+    border:solid 1px lightgrey !important;
+    border-radius:1rem !important;
+}
+.card{
+    border:none !important;
+    margin-bottom: 2rem;
+
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    object-fit: cover !important;
+}
+.card-text{
+    padding: 0 !important;
+    color: black;
+}
+.list{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.3;
+    background-color: white;
+}
+/*show*/
+.view-img{
+    margin-top: 2rem !important;
+    height: 40vh;
+    
+}
+.btns{
+    display: flex;
+}
+.err-heading{
+    text-align: center;
+}
+#filters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.filter{
+    margin-right: 20px;
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0.7;
+
+
+}
+/* ...existing code... */
+.filter:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.tax{
+    border: 1px solid lightgray;
+    border-radius:10px;
+   padding:10px;
+ text-align: center;
+ display: inline-block;
+    
+}
+.tax-price{
+    display:none;
+}
+.btn-search{
+    background-color: rgb(243, 40, 40) ;
+    display: flex;
+    border-radius:20px;
+
+}
+.btn-search:hover{
+    background-color: rgb(243, 40, 40) ;
+}
+.fa-magnifying-glass{
+    margin-right:1rem;
+    margin-top: 0.2rem;
+}
+#search-bar{
+    border-radius: 20px;
+    padding:0 2.5rem 0 2.5rem;
+}
+.me-2{
+    width:20rem;
+}

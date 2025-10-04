@@ -1,0 +1,93 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+<body>
+<div id="filters" class="d-flex flex-wrap">
+  <div class="filter">
+      <i class="fa-solid fa-fire"></i>
+      <p>Trending</p>
+  </div>
+  <div class="filter">
+ <i class="fa-solid fa-bed"></i>
+ <p>Rooms</p>
+  </div>
+  <div class="filter">
+<i class="fa-solid fa-sailboat"></i>
+<p>Boat House</p>
+  </div>
+  <div class="filter">
+<i class="fa-solid fa-mountain-city"></i>
+<p>Ionic City</p>
+  </div>
+<div class="filter">
+  <i class="fa-solid fa-person-swimming"></i>
+  <p>Amazing Pools</p>
+</div>
+<div class="filter">
+  <i class="fa-solid fa-hotel"></i>
+  <p>Hotels</p>
+</div>
+<div class="filter">
+  <i class="fa-solid fa-mountain-sun"></i>
+  <p>Mountains</p>
+</div>
+<div class="filter">
+  <i class="fa-solid fa-city"></i>
+  <p>Restaurants</p>
+
+</div>
+<div class="filter">
+  <i class="fa-solid fa-igloo"></i>
+  <p>Tent Houses</p>
+</div>
+<div class="filter">
+  <i class="fa-solid fa-landmark-dome"></i>
+  <p>Tourist Spots</p>
+</div>
+
+<div class="tax ms-auto mb-3">
+  <div class="form-check-reverse form-switch ms-auto ">
+  
+    <label class="form-check-label" for="switchCheckDefault">Display With Taxes</label>
+  
+   
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+ 
+</div>
+</div>
+
+
+</div>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+
+        
+    <% for(list of allListings) {%>
+        <a href="/listings/<%= list._id %>" class="list">
+<div class="card" >
+  <img src="<%= list.image.url%>" class="card-img-top" alt="..." style="height:20rem">
+  <div class="card-img-overlay"></div>
+  <div class="card-body">
+    <p class="card-text"><b><%=list.title%></b><br>
+        <span>&#x20B9</span><%= list.price.toLocaleString('en-IN') %>/Night 
+ <i class="tax-price">&nbsp; &nbsp; +18% &nbsp;GST</i>
+    </p>
+   
+    
+
+  </div>
+</div>  
+</a> 
+ <%  }%> 
+ </div>
+<script>
+  let taxDisplay=document.getElementById('switchCheckDefault');
+  taxDisplay.addEventListener('click',()=>{
+ let pricetags = document.getElementsByClassName("tax-price");
+    for(pricetag of pricetags){
+      if(pricetag.style.display!="inline"){
+        pricetag.style.display="inline";
+         }else{
+          pricetag.style.display="none";
+         }
+        }}
+  );
+</script>  
+</body>
