@@ -131,19 +131,3 @@ margin-top: auto;
 .me-2{
     width:20rem;
 }
-.review-card {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  border-radius: 10px;
-  background: #fff;
-  padding: 1rem;
-  min-width: 220px;
-  max-width: 100%;
-}
-
-@media (max-width: 768px) {
-  .review-card {
-    min-width: 90vw;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-}
