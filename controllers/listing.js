@@ -53,6 +53,7 @@ module.exports.updateRoute=async(req,res)=>{
     req.flash('error','You do not have permission to do that!');
     res.redirect(`/listings/${id}`);
   }else{
+    console.log({...req.body.Listing});
      let listing= await Listing.findByIdtAndUpdate(id,{...req.body.listing});
      if(typeof req.file!='undefined'){
       listing.image.url=req.file.path;
