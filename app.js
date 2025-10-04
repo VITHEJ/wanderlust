@@ -69,8 +69,8 @@ app.use('/listings/:id/review',reviewRoutes);
 app.use('/',userRoutes);
 //middlware
 app.get("/", (req,res)=>{
-
-res.render("./listings/error.ejs", {statusCode:404,message:'Page Not Found'});
+let {statusCode=404,message='Page Not Found'}=err;
+res.render("./listings/error.ejs",{err});
 
 })
 app.use((err,req,res,next)=>{
