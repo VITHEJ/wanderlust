@@ -69,7 +69,7 @@ app.use('/listings/:id/review',reviewRoutes);
 app.use('/',userRoutes);
 //middlware
 app.get("/", (err,req,res)=>{
-let {statusCode=404,message='Page Not Found'}=err;
+let {statusCode=404,message='No page exits'}=err;
 res.render("./listings/error.ejs",{err});
 
 })
