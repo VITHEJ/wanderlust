@@ -69,7 +69,7 @@ app.use('/listings/:id/review',reviewRoutes);
 app.use('/',userRoutes);
 //middlware
 app.get("/", (req,res)=>{
-    res.render("listings/listings.ejs");
+    res.render("./listings/listings.ejs");
 
 })
 app.use((err,req,res,next)=>{
