@@ -29,7 +29,7 @@ router.get("/",wrapasync(homeRoute)
 //new route
 router.get('/new/add',isLoggedIn,newRoute)
 //add
-router.post('/add',upload.single('listing[image]'),validate,wrapasync(createListing));
+router.post('/add',upload.single('listing[image]'),wrapasync(createListing));
 //search route
 router.get('/search',wrapasync(seacrhRoute));
 
@@ -38,7 +38,7 @@ router.get('/search',wrapasync(seacrhRoute));
 router.route("/:id")
 .get(wrapasync(individualRoute)
 )
-.put(isLoggedIn,wrapasync(updateRoute)
+.put(isLoggedIn,validate,wrapasync(updateRoute)
 )
 
 //edit route
