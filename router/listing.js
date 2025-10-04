@@ -29,7 +29,7 @@ router.get("/",wrapasync(homeRoute)
 //new route
 router.get('/new/add',isLoggedIn,newRoute)
 //add
-router.post('/add',upload.single('listing[image]'),wrapasync(createListing));
+router.post('/add',upload.single('listing[image]'),validate,wrapasync(createListing));
 //search route
 router.get('/search',wrapasync(seacrhRoute));
 
