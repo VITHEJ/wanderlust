@@ -13,7 +13,7 @@ const {isLoggedIn}=require('../middleware.js');
 const {saveRedirectUrl}=require('../middleware.js');
 const {postReview,deleteReview}=require('../controllers/review.js');
 
-const validateReview=(err,req,res,next)=>{
+const validateReview=(req,res,next)=>{
   let {error}=reviewSchema.validate(req.body);
 if(error){
   let errorMessage=error.details.map(el=>el.message).join(',');

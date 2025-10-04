@@ -14,7 +14,7 @@ const multer  = require('multer');
 const {storage}=require('../cloudconfig.js');
 const upload = multer({ storage });
 
-const validate=(err,req,res,next)=>{
+const validate=(req,res,next)=>{
     let {error}=ListingSchema.validate(req.body);
     if(error){
         let errorMessage=error.details.map(el=>el.message).join(',');
