@@ -124,10 +124,28 @@ margin-top: auto;
     margin-right:1rem;
     margin-top: 0.2rem;
 }
+
 #search-bar{
     border-radius: 20px;
-    padding:0 2.5rem 0 2.5rem;
+    padding:0 1.5rem 0 1.5rem;
 }
 .me-2{
     width:20rem;
+}
+.search {
+  min-width: 200px;
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .search {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .search form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }

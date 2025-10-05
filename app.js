@@ -22,7 +22,7 @@ const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' });
 const dbUrl=process.env.ATLASDB_URL;
 const userRoutes=require('./router/users.js');
-mongoose.connect(dbUrl)
+mongoose.connect('mongodb+srv://vithejbhavana999_db_user:Xo1lIg2Irn8tmIdT@vithej21.7ednhn4.mongodb.net/?retryWrites=true&w=majority&appName=vithej21')
   .then(() => console.log('Connected!'));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -31,9 +31,9 @@ app.use(methodOverride("_method"));
 app.engine('ejs',engine);
 app.use(express.static(path.join(__dirname,'/public')));
 const store=MongoStore.create({
-    mongoUrl:dbUrl,
+    mongoUrl:'mongodb+srv://vithejbhavana999_db_user:Xo1lIg2Irn8tmIdT@vithej21.7ednhn4.mongodb.net/?retryWrites=true&w=majority&appName=vithej21',
     crypto:{
-        secret:process.env.DB_SECRET,
+        secret:'vithejkumar',
     },
     touchAfter:24*60*60
 });
@@ -42,7 +42,7 @@ console.log('session store error');
 });
 const sessionOptions={
    store, 
-    secret:process.env.DB_SECRET,
+    secret:'vithejkumar',
     resave:false,
     saveUninitialized:true,
     cookie:{
